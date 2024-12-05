@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+        }
+        
+        .gallery-item img {
+            width: 250px;
+            padding: 30px;
+            height: 250px;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Hover Effects */
+        /*  Zoom effect */
+        
+        .gallery-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Bounce effect */
+        
+        .gallery-item:hover img {
+            animation: bounce 0.5s ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .gallery-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body background="New folder\whitebgi.jpg">
+    <div class=" gallery-container ">
+        <div class="gallery-item ">
+            <img src="New folder\ext1.jpg " alt="Image 1 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext2.jpg " alt="Image 2 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext3.jpg " alt="Image 3 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext4.jpg " alt="Image 4 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext5.jpg " alt="Image 5 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext6.jpg " alt="Image 6 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext7.jpg " alt="Image 7 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext06.jpg " alt="Image 7 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext8.jpg " alt="Image 7 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext9.jpg " alt="Image 7 ">
+        </div>
+        <div class="gallery-item ">
+            <img src="New folder\ext00.jpg " alt="Image 7 ">
+        </div>
+    </div>
+</body>
+
+</html>
